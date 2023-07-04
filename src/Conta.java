@@ -1,9 +1,17 @@
 public class Conta {
-    String titular = "José Charles";
-    int numero = 1234;
-    String agencia = "Banco do Brasil";
-    double saldo = 1500d;
-    String dataAbertura = "04/07/2023";
+    String titular;
+    int numero;
+    String agencia;
+    double saldo;
+    String dataAbertura;
+
+    public Conta(String titular, int numero, String agencia, double saldo, String dataAbertura){
+        this.titular = titular;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.saldo = saldo;
+        this.dataAbertura = dataAbertura;
+    }
 
     public void sacar(double valor) {
         saldo = saldo - valor;
@@ -13,7 +21,7 @@ public class Conta {
         saldo = saldo + valor;
     }
 
-    public double calcularRendimento() {
-        return saldo*0.1;
+    public double calcularRendimento(double porcentagemRendimento) {
+        return saldo*(porcentagemRendimento/100);
     }
 }

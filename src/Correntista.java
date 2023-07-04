@@ -2,7 +2,7 @@ public class Correntista {
 
     public static void main(String[] args) {
         
-        Conta conta = new Conta();
+        Conta conta = new Conta("José Charles", 1234, "Banco do Brasil", 1500, "04/07/2023");
 
         System.out.println("Informações da Conta:" +
         "\nTitular: " + conta.titular +
@@ -10,7 +10,7 @@ public class Correntista {
         "\nNúmero da Conta: " + conta.numero +
         "\nData de abertura: " + conta.dataAbertura +
         "\nSaldo atual: R$" + conta.saldo +
-        "\nRendimento: R$" + conta.calcularRendimento());
+        "\nRendimento: R$" + conta.calcularRendimento(10));
 
         
         if (conta.saldo >= 500){
@@ -35,7 +35,7 @@ public class Correntista {
         conta.depositar(800);
         System.out.println("\nValor depositado: R$ 800,00" + "\nSaldo atual: R$ " + conta.saldo);
 
-        System.out.println("\nRendimento: R$" + conta.calcularRendimento());
+        System.out.println("\nRendimento: R$" + conta.calcularRendimento(10));
 
     }
     
